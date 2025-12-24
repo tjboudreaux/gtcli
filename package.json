@@ -1,0 +1,58 @@
+{
+	"name": "@tjboudreaux/gtcli",
+	"version": "0.1.0",
+	"description": "Google Tasks CLI",
+	"type": "module",
+	"bin": {
+		"gtcli": "dist/cli.js"
+	},
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc && chmod +x dist/cli.js",
+		"check": "biome check src/ --write --diagnostic-level=error && tsc --noEmit",
+		"test": "vitest run --coverage",
+		"test:watch": "vitest",
+		"test:coverage": "vitest run --coverage --coverage.thresholds.lines=90 --coverage.thresholds.functions=90 --coverage.thresholds.branches=90 --coverage.thresholds.statements=90",
+		"prepublishOnly": "npm run build",
+		"prepare": "husky"
+	},
+	"dependencies": {
+		"google-auth-library": "^10.1.0",
+		"googleapis": "^153.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@commitlint/cli": "^20.2.0",
+		"@commitlint/config-conventional": "^20.2.0",
+		"@types/node": "^22.10.1",
+		"@vitest/coverage-v8": "^2.1.8",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.2.7",
+		"typescript": "^5.7.2",
+		"vitest": "^2.1.8"
+	},
+	"keywords": [
+		"google-tasks",
+		"tasks",
+		"cli",
+		"todo"
+	],
+	"author": "",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tjboudreaux/gtcli"
+	},
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"lint-staged": {
+		"*.ts": [
+			"biome check --write --diagnostic-level=error"
+		]
+	}
+}
