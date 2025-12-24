@@ -1,6 +1,19 @@
-# gtcli
+# gtcli - Google Tasks CLI
 
-Minimal CLI for Google Tasks.
+[![CI](https://github.com/tjboudreaux/gtcli/actions/workflows/ci.yml/badge.svg)](https://github.com/tjboudreaux/gtcli/actions/workflows/ci.yml)
+[![npm version](https://badge.fury.io/js/%40tjboudreaux%2Fgtcli.svg)](https://www.npmjs.com/package/@tjboudreaux/gtcli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A fast, minimal command-line interface for Google Tasks. Manage your task lists and tasks directly from the terminal with simple, intuitive commands.
+
+## Features
+
+- **Multi-account support** - Manage tasks across multiple Google accounts
+- **Full CRUD operations** - Create, read, update, delete tasks and task lists
+- **Subtasks** - Create hierarchical task structures with parent-child relationships
+- **Tab-separated output** - Easy to parse with standard Unix tools
+- **Secure OAuth2** - Browser-based or manual authentication flow
+- **Cross-platform** - Works on macOS, Linux, and Windows
 
 ## Install
 
